@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
     glewInit();
 
     Model model("/home/leon/Instrument_Pose_Estimation/C", "sphere.dae");// Iron_Man_mark_6.dae  model_simplified.sdf
-    
+    model.Scale(0.5);
     Model room("/home/leon/Instrument_Pose_Estimation/C","room.dae", false);
 
     cv::namedWindow("camera image");

@@ -238,3 +238,11 @@ void Model::visualize(int type) {
         boost::this_thread::sleep(boost::posix_time::microseconds(100000));
     }
 }
+
+void Model::Scale(float scale){
+    Matrix4f ScaleMatrix = Matrix4f::Identity() * scale;
+    ScaleMatrix.bottomRightCorner(1, 1) << 1;
+    for(uint mesh=0; mesh<meshes.size(); mesh++){
+        meshes[mesh]->ModelMatrix = meshes[mesh]->ModelMatrix * ScaleMatrix;
+    }
+}

@@ -20,6 +20,7 @@ public:
     void render(VectorXd &pose, Mat &img, bool clear, string program = "color");
     void render(Mat &img, bool clear, string program = "color");
     void updateViewMatrix(sf::Window &window);
+    void Scale(float scale);
 
     void visualize(int type = NORMALS);
 
